@@ -58,7 +58,7 @@ EXTERNAL_IP6=$(curl -6 --connect-timeout 3 -s http://v6.ipv6-test.com/api/myip.p
 INTERFACES=$(ifconfig | grep UP | egrep -o '(^en[0-9]*|^utun[0-9]*)' | sort -n)
 
 # Start building output
-[[ "$EXTERNAL_IP4" == "None" && "$EXTERNAL_IP6" == "None" ]]  && echo "Disconnected | color=red" || echo "Connected | color=#4FFF50"
+[[ "$EXTERNAL_IP4" == "None" && "$EXTERNAL_IP6" == "None" ]]  && echo "☵ | color=red" || echo "☵ | color=#4FFF50"
 echo "---"
 echo "Refresh | colo=black refresh=true"
 echo "---"
